@@ -2,6 +2,7 @@ const click = document.querySelector(".section-btn a");
 const textfield = document.querySelector(".section-textfield");
 const close = document.querySelector(".close span");
 const sectionInfo = document.querySelector(".section-info");
+sectionInfo.children[0].classList.add("active");
 click.addEventListener("click", (e) => {
   e.preventDefault();
   console.log(click.classList.add("desactive"));
@@ -13,7 +14,7 @@ close.addEventListener("click", (e) => {
   console.log(click.classList.remove("desactive"));
   sectionInfo.classList.remove("desactive");
   sectionInfo.classList.add("active");
-  sectionInfo.children[0].classList.add("active");
+  // sectionInfo.children[0].classList.add("active")
 });
 
 const menuMobile = document.querySelector(".menuBurguer");
