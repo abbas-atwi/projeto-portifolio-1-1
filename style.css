@@ -18,6 +18,9 @@ header {
   justify-content: center;
   border-bottom: 2px solid #4215;
 }
+body {
+  overflow-y: hidden;
+}
 .header-container {
   width: 100vw;
   max-width: 1400px;
