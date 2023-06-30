@@ -179,11 +179,31 @@ header {
   align-items: center;
   text-align: center;
   font-size: 18px;
-  color: #222;
+  color: #fff;
   font-weight: bold;
-  background-color: #eee;
+  border-left: 3px solid #3e3d3d;
+  background-color: #222;
   border-radius: 4px;
   box-shadow: 2px 3px 18px #222;
+}
+@keyframes showP {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.section-info p {
+  background-color: #3e3d3d;
+  padding: 15px;
+  width: 50%;
+  border-radius: 4px;
+}
+.section-info p.active {
+  animation: showP 1.2s forwards;
 }
 .section-info.active {
   display: flex;
@@ -245,11 +265,73 @@ header {
   color: #fff;
   border: 2px solid #3e3d3d;
 }
+
+.menuBurguer {
+  width: 50px;
+  height: 50px;
+  display: none;
+  margin-right: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.menuBurguer .burguer-line {
+  height: 6px;
+  background-color: #222;
+}
+
+@keyframes showMenuMobile {
+  from {
+    opacity: 0;
+    margin-right: -1000px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes showMenuMobileDesactive {
+  from {
+    opacity: 1;
+    margin-right: 0;
+  }
+  to {
+    opacity: 0;
+    margin-left: -1000;
+  }
+}
 /* response */
 
 @media (max-width: 430px) {
   .section-content {
     flex-direction: column;
+  }
+  .menuBurguer {
+    display: flex;
+  }
+  .menu nav {
+    position: absolute;
+    top: 100px;
+    z-index: 999;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #222;
+  }
+  .menu nav.active {
+    display: flex;
+    animation: showMenuMobile 1s forwards;
+  }
+  .menu nav.desactive {
+    display: flex;
+    animation: showMenuMobileDesactive 1s forwards;
+  }
+  .menu ul {
+    flex-direction: column;
+    height: 300px;
+  }
+  .menu ul a {
+    color: #fff;
   }
   .section-content .section-right {
     flex: 1;
