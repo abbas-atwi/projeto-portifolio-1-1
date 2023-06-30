@@ -23,7 +23,7 @@ header {
   max-width: 1400px;
 
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 @keyframes showLogo {
   from {
