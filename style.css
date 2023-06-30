@@ -120,7 +120,7 @@ header {
 .section-btn a {
   display: inline-flex;
   padding: 10px 30px;
-
+  border: 1px solid #eee;
   border-radius: 4px;
   color: #eee;
   background-color: #3e3d3d;
