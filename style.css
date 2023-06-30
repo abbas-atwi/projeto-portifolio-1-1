@@ -265,8 +265,21 @@ header {
     align-items: end;
     height: 370px;
   }
+  .close span {
+    background-color: green;
+  }
   .section-textfield.active {
-    width: 350px;
+    width: 330px;
     height: 250px;
+  }
+  .section-texfield-text {
+    height: 250px;
+  }
+  .section-texfield-text h2 {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+  .section-texfield-text form a {
+    padding: 6px 20px;
   }
 }
